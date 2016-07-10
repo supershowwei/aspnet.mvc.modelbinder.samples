@@ -51,7 +51,7 @@ namespace AspNetMvcModelBinderSamples.JsonConverters
             switch ((OrderType)(int)jobj["Type"])
             {
                 case OrderType.Book: return jobj.ToObject<BookOrder>(serializer);
-                case OrderType.Car:
+                case OrderType.Car: return jobj.ToObject<CarOrder>(serializer);
                 default: return null;
             }
         }

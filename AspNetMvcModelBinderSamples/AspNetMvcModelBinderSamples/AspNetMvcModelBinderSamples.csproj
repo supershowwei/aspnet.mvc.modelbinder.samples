@@ -108,14 +108,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="JsonConverters\CustomerConverter.cs" />
     <Compile Include="JsonConverters\OrderConverter.cs" />
     <Compile Include="ModelBinders\CustomerModelBinder.cs" />
+    <Compile Include="Models\AmericaCustomer.cs" />
     <Compile Include="Models\BookOrder.cs" />
+    <Compile Include="Models\CarOrder.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerType.cs" />
     <Compile Include="Models\Order.cs" />
@@ -128,7 +130,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />

@@ -51,7 +51,7 @@ namespace AspNetMvcModelBinderSamples.JsonConverters
             switch ((CustomerType)(int)jobj["Type"])
             {
                 case CustomerType.Taiwan: return jobj.ToObject<TaiwanCustomer>(serializer);
-                case CustomerType.Japan:
+                case CustomerType.America: return jobj.ToObject<AmericaCustomer>(serializer);
                 default: return null;
             }
         }

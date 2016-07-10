@@ -3,6 +3,6 @@
     public enum CustomerType
     {
         Taiwan = 0,
-        Japan = 1
+        America = 1
     }
 }
