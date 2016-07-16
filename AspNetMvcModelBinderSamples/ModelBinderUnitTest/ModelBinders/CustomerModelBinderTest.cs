@@ -25,9 +25,13 @@ namespace AspNetMvcModelBinderSamples.ModelBinders.Tests
                 {
                     ModelMetadata = ModelMetadataProviders.Current.GetMetadataForType(null, typeof(Customer))
                 };
-            var modelBinder = new CustomerModelBinder();
 
-            controllerContext.HttpContext.Request.InputStream.Returns(new MemoryStream(Encoding.UTF8.GetBytes(DummySerializedCustomer)));
+            controllerContext.HttpContext
+                             .Request
+                             .InputStream
+                             .Returns(new MemoryStream(Encoding.UTF8.GetBytes(DummySerializedCustomer)));
+
+            var modelBinder = new CustomerModelBinder();
 
             // Act
             var actual = modelBinder.BindModel(controllerContext, bindingContext) as Customer;
